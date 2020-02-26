@@ -4,7 +4,6 @@ from django.shortcuts import redirect
 from django.views.decorators.csrf import csrf_protect
 from django import forms
 
-import datetime
 import uuid
 import operator
 

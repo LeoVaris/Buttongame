@@ -20,7 +20,7 @@
       <h2>
         Muuta yhteisen laskurin arvoa
       </h2>
-      <form action="/admin/" method="POST">
+      <form action="/superadmin/" method="POST">
         {% csrf_token %}
         {{counter_form}}
         <input type="submit" value="Muuta">
@@ -30,7 +30,7 @@
       <h2>
         Muuta omien kolikoiden arvoa
       </h2>
-      <form action="/admin/" method="POST">
+      <form action="/superadmin/" method="POST">
         {% csrf_token %}
         {{coin_form}}
         <input type="submit" value="Muuta">
