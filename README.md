@@ -7,3 +7,9 @@ Additional features:
 - Admin page. View and set the hidden number yourself. You can also modify your own coin count.
 - Leaderboard. See the top 5 players! Also comes with a feature to prevent submitting multiple scores from one "account".
 
+## How to use
+You can try this app at: [Coming soon]
+Ssh! Don't tell anyone but the admin page can be viewed at 
+
+## Technical info
+This project is made using Python and Django and is deployed using Heroku. The multiple score prevention is made by giving every player a unique uuid ```uuid.uuid()``` and when submitting a score the server removes any old submmissions with that uuid.
