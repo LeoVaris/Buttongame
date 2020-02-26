@@ -10,6 +10,9 @@ Additional features:
 ## Known problems
 When developing this app, all testing was done using localhost. After deploying to Heroku I found out that the leaderboards are quite buggy(even after changing the region to EU) and change from browser load to another. All actions should be done slowly to avoid any further issues. Also the global counter for every player isn't 100% synced all the time. For better testing use localhost. With localhost I found that the cookies are deleted when close the browser(not a tab). So they are saved only when the same window is open.
 
+## Please consider this
+Please don't judge the UI. Frontend is not my favourite area and I think it can be seen from the product. Also about the server lag I think since this is made for a job application, paying for a host I think is a bit unreasonable. 
+
 ## How to use
 You can try this app at: https://buttongame-varis-eu.herokuapp.com/<br/>
 Don't tell anyone but the admin page can be viewed at /superadmin
