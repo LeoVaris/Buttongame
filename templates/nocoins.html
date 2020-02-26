@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+  	<meta charset="utf-8">
+  	<title>Button game</title>
+  	{% load static %}
+  	<link rel="stylesheet" type="text/css"
+  		href="{% static 'styles.css' %}">
+  </head>
+  <body>
+  	<div class="center">
+  		<h1>
+	  		Et voittanut mitään :(<br>
+	  		Kolikoiden määrä: 0<br>
+	  		Painallusten määrä seuraavaan voittoon: {{to_next}}
+	  	</h1>
+      <h2>
+        Kolikot loppuivat valitettavasti kesken. <br>
+        Haluatko aloittaa uudestaan?
+      </h2>
+  	</div>
+  	<div class="center">
+  		<form action='/' method="GET">
+  			<button class="retry_button">Kokeile uudelleen</button>
+  		</form>
+  	</div>
+  </body>
+</html>

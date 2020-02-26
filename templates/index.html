@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+  	<meta charset="utf-8">
+  	<title>Painikepeli</title>
+  	{% load static %}
+  	<link rel="stylesheet" type="text/css"
+  		href="{% static 'styles.css' %}">
+  	<link rel="icon" href="{% static 'icon512.png' %}">
+  </head>
+  <body>
+  	<div class="center">
+  		<h1>
+	  		Kolikoita: {{coins}}
+	  	</h1>
+  	</div>
+  	<div class="center">
+  		<form action='btnPress' method="GET">
+  			<button class="circle_button">Paina nappia</button>
+  		</form>
+  	</div>
+  	<div class="center">
+  		<h2>
+  			Sinulla on {{coins}} kolikkoa. <br>
+  			Haluasitko lisätä nimesi tulostaululle?<br>
+  			Mahdollinen vanha tuloksesi poistetaan.
+  		</h2>
+  		<form action='/' method="POST">
+  			{% csrf_token %}
+  			{{name_form}}
+  			<input type="submit" value="Lisää">
+  		</form>
+  	</div>
+  	<div class="center">
+  		<h1>
+	  		Tulostaulu:
+	  	</h1>
+	  	<ol style="text-align:center; list-style-position:inside;">
+		  {% for p in ldb %}
+		  <li>
+		      Nimi: {{p.name}}, Kolikoita: {{p.hs}}
+	      </li>
+		  {% endfor %}
+	  	</ol>
+  	</div>
+  </body>
+</html>
+

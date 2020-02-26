@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+  	<meta charset="utf-8">
+  	<title>Button game</title>
+  	{% load static %}
+  	<link rel="stylesheet" type="text/css"
+  		href="{% static 'styles.css' %}">
+  </head>
+  <body>
+  	<div class="center">
+  		<h1>
+  			Yhteinen laskuri: {{number}}
+  		</h1>
+      <h1>
+        Kolikoiden määrä: {{coins}}
+      </h1>
+  	</div>
+    <div class="center">
+      <h2>
+        Muuta yhteisen laskurin arvoa
+      </h2>
+      <form action="/admin/" method="POST">
+        {% csrf_token %}
+        {{counter_form}}
+        <input type="submit" value="Muuta">
+      </form>
+    </div>
+    <div class="center">
+      <h2>
+        Muuta omien kolikoiden arvoa
+      </h2>
+      <form action="/admin/" method="POST">
+        {% csrf_token %}
+        {{coin_form}}
+        <input type="submit" value="Muuta">
+      </form>
+      <br>
+    </div>
+    <div class="center">
+      <form action='/' method="GET">
+        <button class="retry_button">Palaa pääsivulle</button>
+      </form>
+    </div>
+  </body>
+</html>
