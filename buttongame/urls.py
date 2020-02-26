@@ -19,7 +19,7 @@ from django.urls import path
 from buttongame import views
 
 urlpatterns = [
-    path('admin/', views.admin),
+    path('superadmin/', views.admin),
     path('', views.homepage, name='home'),
     path('btnPress/', views.button_press, name='button_press'),
 ]

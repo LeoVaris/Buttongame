@@ -103,10 +103,10 @@ def admin(request):
 		if coin_form.is_valid():
 			new_value = int(coin_form.cleaned_data['new_value'])
 			if new_value >= 0:
-				response = HttpResponseRedirect('/admin')
+				response = HttpResponseRedirect('/superadmin')
 				response.set_cookie('coins', new_value)
 				return response
-		return HttpResponseRedirect('/admin')
+		return HttpResponseRedirect('/superadmin')
 	else:
 		counter_form = ChangeNumber()
 		coin_form = ChangeCoinCount()
